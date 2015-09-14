@@ -1,0 +1,52 @@
+body {margin: 0; font: normal 14px/130% arial,verdana;}
+a, a:hover {color: #FFF; text-decoration: none;}
+
+#wrapper {position: relative; overflow: hidden;}
+#inner-wrapper {width: 960px; margin: 0 auto;}
+#header {min-height: 150px; background: #069; color: #FFF;}
+#header .title {padding: 50px 0 0 30px; margin: 0 0 4px; font-size: 32px; line-height: 36px;}
+#header .sub-title {padding: 0 0 0 30px; margin: 0 0 25px; font-weight: normal; font-size: 16px; line-height: 18px;}
+#content {min-height: 400px; overflow: hidden; padding: 35px; color: #000; border:1px solid #f0f0f0; border-width: 0 1px}
+#footer {background: #f0f0f0; height: 25px; color: #777; padding: 10px;}
+
+#menu {
+	background: #000;
+}
+#menu {margin: 0; padding: 0; list-style-type: none;}
+#menu:after {content: " "; display: block; line-height: 0; height: 0; width: 100%; clear: both;}
+#menu >li {float: left;}
+#menu >li + li {margin-left: 5px;}
+#menu >li > a {
+	display: block; padding: 6px 12px; color: #FFF;
+	-webkit-transition: all .3s;
+	   -moz-transition: all .3s;
+	    -ms-transition: all .3s;
+	     -o-transition: all .3s;
+	        transition: all .3s;
+}
+
+#menu >li > a:hover {background: #E76600;}
+
+@media only screen and (max-width:960px){
+	#inner-wrapper {width: 80%;}
+}
+.block-title {padding: 0 10px;}
+.gallery {overflow: hidden; clear: both; margin: 0 -10px;}
+.gallery .picture {
+	float: left;
+	padding: 0 10px 20px;
+	width: 25%;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.gallery .picture img {
+	max-width: 100%;
+}
+
+
+@media only screen and (max-width:960px){
+	#inner-wrapper {width: 80%;}
+	#gallery .picture {width: 50%;}
+}
