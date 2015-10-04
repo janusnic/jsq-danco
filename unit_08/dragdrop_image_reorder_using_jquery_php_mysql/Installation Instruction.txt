@@ -1,0 +1,14 @@
+Author: CodexWorld
+Author URI: www.codexworld.com
+Author Email: nityamaity87@gmail.com
+
+Instruction::
+
+1. Extract the zip file and move the folder at localhost directory.
+2. Create a database, like "codexworld".
+3. Open the db.php file and change the database host, database username, database password and database name if needed.
+4. Import the "images.sql" file into the database.
+5. Now run the index.php file.
+
+
+*** If you have any trouble, then feel free to contact CodexWorld. Send your query at the "nityamaity87@gmail.com" email address. Also you can post your valuable comments at the tutorial page.

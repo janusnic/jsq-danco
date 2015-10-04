@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0125)http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#ex-3 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>jQuery: Customizable layout using drag and drop (examples) - 3. Implementation in a real design</title>
+	<link rel="stylesheet" type="text/css" href="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/style.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/devheart-examples.css" media="screen">
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script><meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;Google Analytics&quot;:-1,&quot;jQuery&quot;:&quot;1.4.2&quot;,&quot;jQuery UI&quot;:&quot;1.8&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script></head>
+<body class="dhe-body" style="cursor: auto;">
+
+<div id="site-wrapper">
+
+	<div id="dhe-article-info">
+		<h1 class="dhe-h1">jQuery: Customizable layout using drag and drop (examples)</h1>
+		<p class="dhe-p dhe-large">Examples for the article <a href="http://devheart.org/articles/jquery-customizable-layout-using-drag-and-drop/" class="dhe-link">jQuery: Customizable layout using drag and drop</a> by <a href="http://devheart.org/" class="dhe-link">DevHeart</a>.</p>
+		<div id="dhe-step-navigation">
+			<div class="dhe-left">
+				<select onchange="parent.location=this.options[selectedIndex].value" class="dhe-select" id="dhe-step-dropdown">
+					<option value="../1-getting-started-with-sortable-lists/index.html">1. Getting started with sortable lists</option>
+					<option value="../2-saving-and-loading-items/index.html">2. Saving and loading items</option>
+					<option value="../3-implementation-in-a-real-design/index.html" selected="selected">3. Implementation in a real design</option>
+				</select>
+			</div>
+			<div class="dhe-right">
+				<a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/2-saving-and-loading-items/index.html" class="dhe-link">« Previous</a>
+			</div>
+			<div class="dhe-clearer">&nbsp;</div>
+		</div>
+	</div>	
+
+	<div class="dhe-example-section" id="ex-3">
+		<div class="dhe-example-section-header">
+			<h3 class="dhe-h3 dhe-example-title">Example 3: Implementation in a real design</h3>
+			<div class="dhe-example-description">Positions of the top elements ("Mission Statement", "Next Event", "Follow Us") and elements in the sidebar are customizable (<strong class="dhe-strong">click and drag on the titles</strong>). Positions are saved using cookies, you can refresh your browser to see that it works (cookies needs to be enabled).</div>
+		</div>
+		<div class="dhe-example-section-content">
+
+			<!-- BEGIN: XHTML for example 3 -->
+
+			<div id="example-3">
+
+				<div id="header">
+
+					<div id="top">
+
+						<div class="left" id="logo">
+							<a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html"><img src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/logo.gif" alt=""></a>
+						</div>
+
+						<div class="left navigation" id="main-nav">
+
+							<ul class="tabbed">
+								<li class="current-tab"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html">Blog</a></li>
+								<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Events</a></li>
+								<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">About</a></li>
+								<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Archives</a></li>
+								<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Join Us!</a></li>
+							</ul>
+
+							<div class="clearer">&nbsp;</div>
+
+						</div>
+
+						<div class="clearer">&nbsp;</div>
+
+					</div>
+
+				</div>
+
+				<div id="splash">
+
+					<ul class="sortable-list ui-sortable" id="splash-list"><li class="sortable-item col3 left" id="follow" style="opacity: 1; z-index: 0;"><h2 class="label label-blue">Follow Us</h2>
+
+<p class="quiet large">http://twitter.com/username</p>
+
+<p>Nulla mollis sollicitudin nulla et mattis.<span class="quiet">(2 hours ago)</span></p>
+<p>Torquent per conubia nostra, per inceptos himenaeos. <span class="quiet">(2 hours ago)</span></p>
+<p>In sed ante at velit hendrerit blandit a et nibh. Cras sed cursus nulla. <span class="quiet">(3 hours ago)</span></p>
+<p>Nullam vitae mi at nulla blandit. <span class="quiet">(5 hours ago)</span></p></li><li class="sortable-item col3 left" id="mission" style="opacity: 1; z-index: 0;"><h2 class="label label-green">Mission Statement</h2>
+
+<p class="quiet large">What we want to achieve</p>
+
+<p>Vestibulum eu pellentesque ante. Sed tincidunt quam eu nisl luctus id mattis tellus rhoncus.</p>
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Donec dapibus eros vitae nibh venenatis faucibus.</p>
+<p><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" class="more">Learn more »</a></p></li><li class="sortable-item col3 left" id="event"><h2 class="label label-orange">Next Event</h2>
+
+<p class="quiet large">Friday, August 18, 2009</p>
+
+<p><img src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/sample-event.jpg" width="240" height="80" alt="" class="bordered"></p>
+<p><em>Aliquam augue neque, rhoncus et dictum in, cursus eget mauris.</em></p></li></ul>
+
+					<div class="clearer">&nbsp;</div>
+
+				</div>
+
+				<div class="main" id="main-two-columns">
+
+					<div class="left" id="main-content">
+
+						<div class="section">
+
+							<div class="section-title">Blog</div>
+
+							<div class="section-content">
+
+								<div class="post">
+
+									<div class="post-title"><h2><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Template Information</a></h2></div>
+
+									<div class="post-date">Saturday, September 19, 2009 by Viktor Persson</div>
+
+									<div class="post-body">
+
+										<p><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#"><img src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/sample-image.jpg" alt="" class="bordered"></a></p>
+
+										<p class="large">This is a free website template by <a href="http://arcsin.se/">Arcsin</a>, built using tableless XHTML and CSS.</p>
+													
+										<p>This template is distributed under a <a href="http://templates.arcsin.se/license/">Creative Commons Attribution 2.5 License</a>, which allows you to use and modify it for any purpose (personal and commercial), under the condition that you keep the provided credit links in the footer.</p>
+
+										<p>The latest template version and CMS conversions for platforms such as WordPress and Blogger can be found at the official <a href="http://templates.arcsin.se/simple-organization-website-template/">Simple Organization Website Template</a> page.</p>
+
+										<p>For more templates, questions and comments please visit <a href="http://templates.arcsin.se/">Arcsin Web Templates</a>.</p>
+
+										<a href="http://templates.arcsin.se/" class="more">Read more »</a>
+
+									</div>
+								
+								</div>
+
+								<div class="content-separator"></div>
+
+								<div class="col3 left">
+									<div class="column-content">
+
+										<div class="post">
+											<h3><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Article title</a></h3>
+											<p>Integer diam elit, condi mentum ac semper ut, tincidunt non diam. Ut congue at commodo aenean euismod tincidunt lorem euismod.</p>
+											<a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" class="more">Read more »</a>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="col3 col3-mid left">
+									<div class="column-content">
+
+										<div class="post">
+											<h3><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Second Article Title</a></h3>
+											<p>Sed congue lacinia leo, sed dignissim odio pharetra vel. Fusce a dignissim dui. Fusce semper porttitor enim dapibus venenatis.</p>
+											<a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" class="more">Read more »</a>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="col3 right">
+									<div class="column-content">
+
+										<div class="post">
+											<h3><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Third title</a></h3>
+											<p>Sed auctor hendrerit eros eu eleifend. Cras hendrerit iaculis sodales. Pellentesque interdum rhoncus magna.</p>
+											<a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" class="more">Read more »</a>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="clearer">&nbsp;</div>
+
+							</div>
+
+						</div>
+
+						<div class="clearer">&nbsp;</div>
+						
+					</div>
+
+					<div class="right sidebar" id="sidebar">
+
+						<ul class="sortable-list ui-sortable" id="sidebar-list"><li class="sortable-item" id="search"><div class="section">
+
+	<div class="section-title">Search</div>
+
+	<div class="section-content">
+		<form method="post" action="">
+			<input type="text" class="text" size="28"> &nbsp; <input type="submit" class="button" value="Submit">
+		</form>
+	</div>
+
+</div>
+</li><li class="sortable-item" id="entries"><div class="section">
+
+	<div class="section-title">Recent Entries</div>
+
+	<div class="section-content">
+
+		<ul class="nice-list">
+			<li>
+				<div class="left"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Aenean tempor arcu..</a></div>
+				<div class="right">Oct 12</div>
+				<div class="clearer">&nbsp;</div>
+			</li>
+			<li>
+				<div class="left"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Justo interdum rutrum</a></div>
+				<div class="right">Sep 15</div>
+				<div class="clearer">&nbsp;</div>
+			</li>
+			<li>
+				<div class="left"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">In nec justo in urna</a></div>
+				<div class="right">Sep 12</div>
+				<div class="clearer">&nbsp;</div>
+			</li>
+			<li>
+				<div class="left"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Accumsan condimentum</a></div>
+				<div class="right">Sep 6</div>
+				<div class="clearer">&nbsp;</div>
+			</li>
+			<li>
+				<div class="left"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Etiam commodo bibendum</a></div>
+				<div class="right">Aug 27</div>
+				<div class="clearer">&nbsp;</div>
+			</li>
+			<li>
+				<div class="left"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Mauris euismod justo</a></div>
+				<div class="right">Aug 21</div>
+				<div class="clearer">&nbsp;</div>
+			</li>
+			<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" class="more">Browse Archives »</a></li>
+		</ul>
+
+	</div>
+
+</div></li><li class="sortable-item" id="board"><div class="section">
+
+	<div class="section-title">Board of Members</div>
+
+	<div class="section-content">
+
+		<ul class="nice-list">
+			<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Elem Semper</a> <span class="quiet">- Director</span></li>
+			<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Porttitor Urna</a> <span class="quiet">- Lead Writer</span></li>
+			<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Congue Porttitor</a> <span class="quiet">- Editor</span></li>
+			<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Etiam Blandit</a> <span class="quiet">- Writer</span></li>
+			<li><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Diet Tesque</a> <span class="quiet">- Writer</span></li>
+		</ul>
+		
+	</div>
+
+</div></li><li class="sortable-item" id="topics"><div class="section">
+
+	<div class="section-title">Topics</div>
+
+	<div class="section-content">
+		<div class="quiet">
+			<a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 120%">vestibulum</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 120%">ante</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 150%">ipsum</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 120%">faucibus</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 90%">orci luctus</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 80%">ultrices</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 220%">posuere cubilia</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 100%">curae</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 110%">quisque</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 150%">ut arcu</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 140%">eros</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 100%">vestibulum</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 90%">dapibus</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 120%">volutpat</a> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#" style="font-size: 200%">elementum</a> 
+		</div>
+	</div>
+
+</div></li></ul>
+
+					</div>
+
+					<div class="clearer">&nbsp;</div>
+
+				</div>
+
+				<div id="footer">
+
+					<div class="left" id="footer-left">
+						
+						<img src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/logo-small.gif" alt="" class="left">
+						
+						<p>© 2002-2009 Simple Organization. All rights Reserved</p>
+
+						<p class="quiet"><a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a></p>
+						
+						<div class="clearer">&nbsp;</div>
+
+					</div>
+
+					<div class="right" id="footer-right">
+
+						<p class="large"><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Blog</a> <span class="text-separator">|</span> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Events</a> <span class="text-separator">|</span> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">About</a> <span class="text-separator">|</span> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Archives</a> <span class="text-separator">|</span> <strong><a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#">Join Us!</a></strong> <span class="text-separator">|</span> <a href="http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/3-implementation-in-a-real-design/index.html#top" class="quiet">Page Top ↑</a></p>
+
+					</div>
+
+					<div class="clearer">&nbsp;</div>
+
+				</div>
+
+			</div>
+
+				
+			<!-- END: XHTML for example 3 -->
+
+		</div>
+	</div>
+
+</div>
+
+<!-- Example JavaScript files -->
+<script type="text/javascript" src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/jquery.min.js"></script>
+<script type="text/javascript" src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/jquery-ui.min.js"></script>
+<script type="text/javascript" src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/jquery.cookie.js"></script>
+
+<!-- Example jQuery code (JavaScript)  -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	// Get items
+	function getItems(id)
+	{
+		return $('#' + id + '-list').sortable('toArray').join(',');
+	}
+
+	// Load items from cookie
+	function loadItemsFromCookie(name)
+	{
+		if ( $.cookie(name) != null )
+		{
+			renderItems($.cookie(name));
+		}
+		else
+		{
+			alert('Cookie "' + name + '" is not set');
+		}
+	}
+
+	// Render items
+	function renderItems(id, itemStr)
+	{
+		var list = $('#' + id + '-list');
+		var items = itemStr.split(',')
+
+		for ( var i in items )
+		{
+			html = '<li class="sortable-item';
+
+			if ( id == 'splash' )
+			{
+				html += ' col3 left';
+			}
+			html += '" id="' + items[i] + '"><div class="loader"></div></li>';
+
+			list.append(html);
+
+			// Load html file
+			$('#' + items[i]).load('content/' + items[i] + '.html');
+		}	
+	}
+
+	// Load items from cookie or defaults
+	var defaults = [];
+	
+	defaults['splash'] = 'mission,event,follow';
+	defaults['sidebar'] = 'search,entries,board,topics';
+
+	var splashSource = ( $.cookie('splash-cookie') == null ) ? defaults['splash'] : $.cookie('splash-cookie');
+	renderItems('splash', splashSource);
+
+	var sidebarSource = ( $.cookie('sidebar-cookie') == null ) ? defaults['sidebar'] : $.cookie('sidebar-cookie');
+	renderItems('sidebar', sidebarSource);
+	
+
+	// Splash (top)
+	$('#splash .sortable-list').sortable({
+		axis: 'x',
+		forceHelperSize: true,
+		forcePlaceholderSize: true,
+		handle: '.label',
+		opacity: 0.8,
+		placeholder: 'placeholder',
+		update: function(){
+			$.cookie('splash-cookie', getItems('splash'));
+		}
+	});
+
+	// Sidebar
+	$('#sidebar .sortable-list').sortable({
+		axis: 'y',
+		containment: 'parent',
+		forceHelperSize: true,
+		forcePlaceholderSize: true,
+		handle: '.section-title',
+		opacity: 0.8,
+		placeholder: 'placeholder',
+		update: function(){
+			$.cookie('sidebar-cookie', getItems('sidebar'));
+		}
+	});
+
+});
+
+</script>
+
+<!-- This is NOT a part of the example code (Google Analytics) -->
+<script type="text/javascript" src="./jQuery_ Customizable layout using drag and drop (examples) - 3. Implementation in a real design_files/ga.js"></script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-223188-18"); pageTracker._setDomainName(".devheart.org"); pageTracker._trackPageview(); } catch(err) {}</script>
+
+
+</body></html>
