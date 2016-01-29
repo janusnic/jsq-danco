@@ -1,4 +1,4 @@
 function a() {
-return alert("Мама мыла раму");
+return alert("Hello world");
 }
 
