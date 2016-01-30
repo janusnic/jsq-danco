@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+<script type="text/javascript">
+ function tableCreate(){
+    var body = document.body,
+        tbl  = document.createElement('table');
+        tbl.setAttribute('id', 'myTable');
+    tbl.style.width  = '500px';
+    tbl.style.border = '3px solid red';
+    
+    for(var i = 0; i < 5; i++){
+        var tr = tbl.insertRow();
+        for(var j = 0; j < 5; j++){
+            
+            var td = tr.insertCell();
+
+            td.appendChild(document.createTextNode('Cell'));
+            td.style.border = '2px solid green';
+            
+        }
+    }
+    body.appendChild(tbl);
+ }
+tableCreate();
+</script>
+</body>
+</html>

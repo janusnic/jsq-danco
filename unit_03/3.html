@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html class=''>
+<head>
+
+<meta charset='UTF-8'>
+
+<style>
+button{
+  width:150px;
+  background-color: #00CCEE;
+  margin-left:15px;
+  font-size:120%;
+}
+p{
+  border:2px solid black;
+    text-align: center;
+    margin: 20px;
+    width:250px;
+}
+
+#stuff{
+    text-align: center;
+  color:white;
+    background-color: #7F7F7F;
+}</style></head><body>
+<h1>Модификация DOM</h1>
+        <button onclick="document.getElementById('stuff').innerHTML = 'Нажали первую Button';">Первая</button>
+
+        <button onclick="document.getElementById('stuff').innerHTML = 'Нажали сдедующую Button';">Следующая</button>
+    <p>Это не меняется.</p>
+    <p id="stuff">Это меняется.</p>
+    <p>Это не меняется.</p>
+
+</body></html>

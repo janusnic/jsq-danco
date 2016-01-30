@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+    </style>
+</head>
+<body>
+<button onclick="tableCreate()">Create thead</button>
+<button onclick="DeleteFunction()">Delete table</button>  
+<button onclick="DeleteThead()">Delete thead</button>  
+<button onclick="AddCaption()">Add Caption</button>  
+<button onclick="AddFoot()">Add Footer</button>  
+<button onclick="deleteTableRow()">Delete Row</button>  
+<button onclick="reloadPage()">Reload Page</button>  
+
+<script type="text/javascript">
+ function tableCreate(){
+    var body = document.body,
+        tbl  = document.createElement('table');
+        tbl.setAttribute('id', 'myTable');
+    tbl.style.width  = '500px';
+    tbl.style.border = '3px solid red';
+
+    var header = tbl.createTHead();
+    var tr = header.insertRow(0);
+    for(var j = 0; j < 5; j++){
+           
+            var th = tr.insertCell();
+
+            th.appendChild(document.createTextNode('Head Cell'));
+            th.style.border = '5px solid blue';
+            
+        }
+    
+    for(var i = 0; i < 5; i++){
+        var tr = tbl.insertRow();
+        for(var j = 0; j < 5; j++){
+            
+            var td = tr.insertCell();
+
+            td.appendChild(document.createTextNode('Cell'));
+            td.style.border = '2px solid green';
+            
+        }
+    }
+    body.appendChild(tbl);
+    return false;
+ }
+ function DeleteFunction() {
+    document.getElementById("myTable").remove();
+    return false;
+}
+function DeleteThead() {
+    document.getElementById("myTable").deleteTHead();
+    return false;
+}
+function AddCaption() {
+    var table = document.getElementById("myTable").createCaption();
+    table.innerHTML = "<b>My table caption</b>";
+    return false;
+}
+
+function AddFoot() {
+    var table = document.getElementById("myTable");
+    var footer = table.createTFoot();
+    var row = footer.insertRow(0);
+    var cell = row.insertCell(0);
+    cell.innerHTML = "<b>This is a table footer</b>";
+    return false;
+}
+
+function deleteTableRow() {
+            var dr=0;
+            if(confirm("It will be deleted..!!")) {
+               document.getElementById("myTable").deleteRow(dr);
+                }
+            }
+function reloadPage(){
+                location.reload();
+            }
+</script>
+</body>
+</html>

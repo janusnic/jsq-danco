@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function create() {
+                var row = 5, col = 5;
+                var tablestart="<table id=myTable border=1>";
+                var tableend = "</table>";
+                var trstart = "<tr bgcolor=#ff9966>";
+                var trend = "</tr>";
+                var tdstart = "<td>";
+                var tdend = "</td>";
+                                
+                document.write(tablestart);
+
+                for (var r=0;r<row;r++) {
+                    document.write(trstart);
+                    for(var c=0; c<col; c++) {
+                        document.write(tdstart+"Row."+r+" Col."+c+tdend);
+                    }
+                }
+                document.write(tableend);
+                document.write("<br/>");
+             }
+        </script>
+        <br/>
+            <button id="create" onclick="create()">create table</button>
+        <br/>
+    </body>
+</html>
