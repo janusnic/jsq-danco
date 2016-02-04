@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>CSS+JS OnClick</title>
+<link rel="stylesheet" href="menu2.css">
+</head>
+<body>
+
+<div id="wrap">
+    <div id="headline">
+        CSS+JS OnClick
+    </div>
+    <div id="content" class="clearfix">
+        <div id="center">
+            <div id="menu_body"> 
+   
+
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    Web
+</div>
+<script>
+ var parent_menu = document.getElementById('menu_body');
+
+ var ul = document.createElement('ul');
+ ul.setAttribute('id', 'ul1');
+ 
+
+var createMenu = function () {
+    for (var i = 0; i < 10; i++) {
+        var li1 = document.createElement('li');
+        var a1 = document.createElement('a');
+        a1.appendChild(document.createTextNode('Menu'+i));
+        
+        var li2 = [], a2 = [];
+        var ul1 = document.createElement('ul');
+        
+        for (var j = 0; j < i+1; j++) {
+        
+            li2[j] = document.createElement('li');
+            a2[j] = document.createElement('a');
+            a2[j].appendChild(document.createTextNode('Sub Menu'+j));
+            a2[j].setAttribute('href', '#');
+            li2[j].appendChild(a2[j]);
+            ul1.appendChild(li2[j]);
+        }
+        var smenu = 'sub_menu_';
+        smenu += i;
+        a1.setAttribute('href', '#');
+        var jsm = "openMenu('"+smenu+"');return(false)";
+
+        //"openMenu(smenu);return(false)"
+        a1.setAttribute('onclick', jsm);
+        li1.appendChild(a1);
+
+        ul1.setAttribute('id', smenu);
+        li1.appendChild(ul1);
+        
+        ul.appendChild(li1);
+      }
+    parent_menu.appendChild(ul);
+};
+
+window.onload=createMenu;
+
+
+</script>
+
+</body>
+</html>
