@@ -684,7 +684,7 @@ console.log( products['Bow tie'][1] );
 
 1 Happy Shopping
 ----------------
-...
+```
 
    for (var item in products) {
         var itemName = products[item][0], 
