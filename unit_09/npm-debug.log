@@ -1,0 +1,176 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'html2jade' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'html2jade', null ]
+6 verbose cache add name=undefined spec="html2jade" args=["html2jade",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'html2jade',
+7 verbose parsed url   path: 'html2jade',
+7 verbose parsed url   href: 'html2jade' }
+8 silly lockFile 512a5fdd-html2jade html2jade
+9 verbose lock html2jade /home/janus/.npm/512a5fdd-html2jade.lock
+10 silly lockFile 512a5fdd-html2jade html2jade
+11 silly lockFile 512a5fdd-html2jade html2jade
+12 verbose addNamed [ 'html2jade', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile a813af54-html2jade html2jade@
+15 verbose lock html2jade@ /home/janus/.npm/a813af54-html2jade.lock
+16 silly addNameRange { name: 'html2jade', range: '*', hasData: false }
+17 verbose request where is /html2jade
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id 0d0c1d68f2c55f03
+20 verbose url raw /html2jade
+21 verbose url resolving [ 'https://registry.npmjs.org/', './html2jade' ]
+22 verbose url resolved https://registry.npmjs.org/html2jade
+23 verbose request where is https://registry.npmjs.org/html2jade
+24 info trying registry request attempt 1 at 13:58:19
+25 verbose etag "ALFFPRH0PTO3VORQPJH5D2GP6"
+26 http GET https://registry.npmjs.org/html2jade
+27 http 304 https://registry.npmjs.org/html2jade
+28 silly registry.get cb [ 304,
+28 silly registry.get   { date: 'Thu, 25 Feb 2016 11:58:19 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     'cache-control': 'max-age=300',
+28 silly registry.get     etag: '"ALFFPRH0PTO3VORQPJH5D2GP6"',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'keep-alive',
+28 silly registry.get     'x-served-by': 'cache-ams4134-AMS',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1456401499.584774,VS0,VE173',
+28 silly registry.get     vary: 'Accept' } ]
+29 verbose etag https://registry.npmjs.org/html2jade from cache
+30 silly addNameRange number 2 { name: 'html2jade', range: '*', hasData: true }
+31 silly addNameRange versions [ 'html2jade',
+31 silly addNameRange   [ '0.0.2',
+31 silly addNameRange     '0.0.3',
+31 silly addNameRange     '0.0.4',
+31 silly addNameRange     '0.0.5',
+31 silly addNameRange     '0.0.6',
+31 silly addNameRange     '0.0.7',
+31 silly addNameRange     '0.0.8',
+31 silly addNameRange     '0.1.0',
+31 silly addNameRange     '0.1.1',
+31 silly addNameRange     '0.1.2',
+31 silly addNameRange     '0.1.3',
+31 silly addNameRange     '0.1.4',
+31 silly addNameRange     '0.1.15',
+31 silly addNameRange     '0.1.16',
+31 silly addNameRange     '0.1.17',
+31 silly addNameRange     '0.1.18',
+31 silly addNameRange     '0.1.19',
+31 silly addNameRange     '0.1.20',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.4.2',
+31 silly addNameRange     '0.4.3',
+31 silly addNameRange     '0.4.4',
+31 silly addNameRange     '0.4.5',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.5.1',
+31 silly addNameRange     '0.5.2',
+31 silly addNameRange     '0.5.3',
+31 silly addNameRange     '0.6.0',
+31 silly addNameRange     '0.6.1',
+31 silly addNameRange     '0.6.2',
+31 silly addNameRange     '0.6.3',
+31 silly addNameRange     '0.6.4',
+31 silly addNameRange     '0.6.5',
+31 silly addNameRange     '0.7.0',
+31 silly addNameRange     '0.7.1',
+31 silly addNameRange     '0.7.5',
+31 silly addNameRange     '0.7.6',
+31 silly addNameRange     '0.7.7',
+31 silly addNameRange     '0.7.8',
+31 silly addNameRange     '0.8.0',
+31 silly addNameRange     '0.8.1',
+31 silly addNameRange     '0.8.2',
+31 silly addNameRange     '0.8.3',
+31 silly addNameRange     '0.8.4' ] ]
+32 verbose addNamed [ 'html2jade', '0.8.4' ]
+33 verbose addNamed [ '0.8.4', '0.8.4' ]
+34 silly lockFile 63971ea4-html2jade-0-8-4 html2jade@0.8.4
+35 verbose lock html2jade@0.8.4 /home/janus/.npm/63971ea4-html2jade-0-8-4.lock
+36 silly lockFile 63971ea4-html2jade-0-8-4 html2jade@0.8.4
+37 silly lockFile 63971ea4-html2jade-0-8-4 html2jade@0.8.4
+38 silly lockFile a813af54-html2jade html2jade@
+39 silly lockFile a813af54-html2jade html2jade@
+40 silly resolved [ { name: 'html2jade',
+40 silly resolved     description: 'HTML to Jade conversion tool',
+40 silly resolved     version: '0.8.4',
+40 silly resolved     author: { name: 'Don Park', email: 'donpark@docuverse.com' },
+40 silly resolved     repository: { type: 'git', url: 'git://github.com/donpark/html2jade.git' },
+40 silly resolved     license: 'BSD',
+40 silly resolved     main: './lib/html2jade.js',
+40 silly resolved     bin: { html2jade: './cli.js' },
+40 silly resolved     scripts: { prepublish: 'coffee -c lib', test: 'mocha' },
+40 silly resolved     dependencies: { commander: '*', he: '^0.4.1', 'jsdom-little': '^0.10.5' },
+40 silly resolved     devDependencies: { async: '*', mocha: '*', 'coffee-script': '~1.6.3' },
+40 silly resolved     engines: { node: '>= 0.4.0' },
+40 silly resolved     gitHead: 'c379dc886192f631ada992a743d44f2271e2f9a7',
+40 silly resolved     bugs: { url: 'https://github.com/donpark/html2jade/issues' },
+40 silly resolved     homepage: 'https://github.com/donpark/html2jade#readme',
+40 silly resolved     _id: 'html2jade@0.8.4',
+40 silly resolved     _shasum: '7022a06d202b289c79c5635dc0baca4a97ee6dfa',
+40 silly resolved     _from: 'html2jade@',
+40 silly resolved     _npmVersion: '2.9.1',
+40 silly resolved     _nodeVersion: '0.10.38',
+40 silly resolved     _npmUser: { name: 'donpark', email: 'donpark@docuverse.com' },
+40 silly resolved     maintainers: [ [Object] ],
+40 silly resolved     dist:
+40 silly resolved      { shasum: '7022a06d202b289c79c5635dc0baca4a97ee6dfa',
+40 silly resolved        tarball: 'http://registry.npmjs.org/html2jade/-/html2jade-0.8.4.tgz' },
+40 silly resolved     directories: {},
+40 silly resolved     _resolved: 'https://registry.npmjs.org/html2jade/-/html2jade-0.8.4.tgz',
+40 silly resolved     readme: 'ERROR: No README data found!' } ]
+41 info install html2jade@0.8.4 into /usr/lib
+42 info installOne html2jade@0.8.4
+43 verbose lib/node_modules/html2jade unbuild
+44 verbose tar unpack /home/janus/.npm/html2jade/0.8.4/package.tgz
+45 silly lockFile 54e289e9-r-usr-lib-node-modules-html2jade tar:///usr/lib/node_modules/html2jade
+46 verbose lock tar:///usr/lib/node_modules/html2jade /home/janus/.npm/54e289e9-r-usr-lib-node-modules-html2jade.lock
+47 silly lockFile b5375859--npm-html2jade-0-8-4-package-tgz tar:///home/janus/.npm/html2jade/0.8.4/package.tgz
+48 verbose lock tar:///home/janus/.npm/html2jade/0.8.4/package.tgz /home/janus/.npm/b5375859--npm-html2jade-0-8-4-package-tgz.lock
+49 silly gunzTarPerm modes [ '755', '644' ]
+50 error Error: EACCES, mkdir '/usr/lib/node_modules/html2jade'
+50 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/html2jade']
+50 error   errno: 3,
+50 error   code: 'EACCES',
+50 error   path: '/usr/lib/node_modules/html2jade',
+50 error   fstream_type: 'Directory',
+50 error   fstream_path: '/usr/lib/node_modules/html2jade',
+50 error   fstream_class: 'DirWriter',
+50 error   fstream_stack:
+50 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+50 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+50 error      'Object.oncomplete (fs.js:108:15)' ] }
+51 error Please try running this command again as root/Administrator.
+52 error System Linux 3.13.0-37-generic
+53 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "html2jade"
+54 error cwd /home/janus/github/jsq-danco/unit_09
+55 error node -v v0.10.37
+56 error npm -v 1.4.28
+57 error path /usr/lib/node_modules/html2jade
+58 error fstream_path /usr/lib/node_modules/html2jade
+59 error fstream_type Directory
+60 error fstream_class DirWriter
+61 error code EACCES
+62 error errno 3
+63 error stack Error: EACCES, mkdir '/usr/lib/node_modules/html2jade'
+64 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+64 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+64 error fstream_stack Object.oncomplete (fs.js:108:15)
+65 verbose exit [ 3, true ]
